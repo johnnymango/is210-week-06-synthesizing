@@ -20,16 +20,16 @@ def get_party_stats(families, table_size=6):
 
     Examples:
 
-        >>> get_party_stats([['Jan'], ['Jen', 'Jess'], ['Jem', 'Jack', 'Janis']])
-        (6, 3)
+        >>> get_party_stats([['Jan'], ['Jess'], ['Jem', 'Jack', 'Janis']])
+        (5, 3)
 
-        >>> get_party_stats([['Jan'], ['Jen', 'Jess'], ['Jem', 'Jack', 'Janis']], 2)
-        (6, 4)
+        >>> get_party_stats([['Jan'], ['Jess'], ['Jem', 'Jack', 'Janis']], 2)
+        (5, 4)
     """
     tablesneeded = 0
     totalattendees = 0
     for groups in families:
         tablesneeded += -(-len(groups) // table_size)
-        for members in groups:
-             totalattendees += 1
+        for dummy in groups:
+            totalattendees += 1
     return totalattendees, tablesneeded

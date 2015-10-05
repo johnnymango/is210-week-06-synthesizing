@@ -21,7 +21,6 @@ def prepare_email(appointments):
     """
     emaillst = []
     for items in appointments:
-        emaillst.append('Dear {},\nI look forward to meeting with you on {' \
-                   '}.\nBest,' \
-                '\nMe'.format(*items))
+        emaillst.append('Dear {},\nI look forward to meeting with you on {'
+                        '}.\nBest,' '\nMe'.format(*items))
     return emaillst
